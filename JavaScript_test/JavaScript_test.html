@@ -19,12 +19,13 @@
     <script>
         var tempc =prompt("請輸入攝氏溫度");
         var tempf = (tempc * 1.8) +32;
-        var text= "攝氏" + tempc + "度，等於華氏" + tempf + "度" + "(這裡是我們用javascript加入的 p )";
+        var test= "攝氏" + tempc + "度，等於華氏" + tempf + "度" + "(這裡是我們用javascript加入的 p )";
 
-        var s = document.createElement("p")
-        s.innerHTML = text;
+        var s = document.createElement("p") //createElement 是指創建一個 HTML 裡面沒有的元素
+        s.innerHTML = test;
+        s.classList.add("test");  //這裡讓我們創建的元素有CLASS名字 這樣才能套用 HTML 的樣式
 
-        document.getElementById("result").appendChild(s);
+        document.getElementById("result").appendChild(s); //appendChild 是指加入一個屬性在 HTML 裡面
     </script>
     <!-- <pre>
         <script>
