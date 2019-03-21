@@ -1,17 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title></title>
-</head>
-<body>
+  </head>
+  <body>
     <!-- <script>
         var tempc =prompt("請輸入攝氏溫度");
         var tempf = (tempc * 1.8) +32;
         document.writeln("攝氏" + tempc + "度，等於華氏" + tempf + "度");
     </script> -->
-    <pre>
+    <!-- <pre>
         <script>
         for(var i = 1; i<10; i++)
         {
@@ -22,9 +22,37 @@
             }
             document.writeln("\n");
         }
-
     </script>
-    </pre>
-    
-</body>
+    </pre> -->
+
+    <script>
+            for(var i = 1; i<10; i++)
+            {
+                for(var j = 1; j<10; j++)
+                {
+                    var namber = i * j;
+                    document.writeln(i + "x" + j + "=" + namber + '</br>');
+                }
+                document.writeln('</br>');
+            }
+        </script>
+
+
+    <!-- <pre>
+        <script>
+            var x = {
+                lastName: "Hello",
+                firstName: "Kitty",
+                gender: "Female"
+            };
+
+            x.fantcont = 99999999999999999;
+
+            for (var prop in x) {
+            var value=x[prop];
+            document.writeln("屬性 "+prop+"="+value);
+            }
+        </script>
+    </pre> -->
+  </body>
 </html>
