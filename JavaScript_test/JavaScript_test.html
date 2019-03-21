@@ -5,54 +5,55 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title></title>
     <style>
-        strong {
-            color: blue;
-        }
+      em {
+        color: rgb(255, 2, 2);
+      }
     </style>
   </head>
   <body>
-      <div id="result">
-          <p>
-              這裡是寫在 HTML 裡面的 P 
-          </p>
-      </div>
+    <div id="result"></div>
+    <button id="show" onclick="doCalculate();">顯示結果</button>
     <script>
-        var tempc =prompt("請輸入攝氏溫度");
-        var tempf = (tempc * 1.8) +32;
-        var test= "攝氏" + tempc + "度，等於華氏" + tempf + "度" + "(這裡是我們用javascript加入的 p )";
+      function doCalculate() {
+        var tempc = prompt("請輸入攝氏溫度");
+        var tempf = tempc * 1.8 + 32;
+        var test ="攝氏" + tempc + "度，等於華氏" + tempf + "度" + "(這裡是我們用javascript加入的 p )";
 
-        var s = document.createElement("p") //createElement 是指創建一個 HTML 裡面沒有的元素
+        var s = document.createElement("p"); //createElement 是指創建一個 HTML 裡面沒有的元素
         s.innerHTML = test;
-        s.classList.add("test");  //這裡讓我們創建的元素有CLASS名字 這樣才能套用 HTML 的樣式
+        s.classList.add("test"); //這裡讓我們創建的元素有CLASS名字 這樣才能套用 HTML 的樣式
 
         document.getElementById("result").appendChild(s); //appendChild 是指加入一個屬性在 HTML 裡面
+      }
     </script>
-    <!-- <pre>
+
+    <!-- 九九乘法表 :
+    <div id="result"></div>
+
         <script>
-        for(var i = 1; i<10; i++)
+        for(var i = 2; i<10; i++)
         {
             for(var j = 1; j<10; j++)
             {
-                var namber = i * j;
-                document.writeln(i + "x" + j + "=" + namber + "\n");
+                var result = i * j;
+                var div = document.createElement("div");
+                div.innerHTML("<em>" + i + "</em> x <em>" + j + " </em> = <em>" + result + "/em");
+                document.getElementById("result").appendChild(div);
             }
-            document.writeln("\n");
         }
-    </script>
-    </pre> -->
+        </script>
 
-    <!-- <script>
-            for(var i = 1; i<10; i++)
-            {
-                for(var j = 1; j<10; j++)
-                {
-                    var namber = i * j;
-                    document.writeln(i + "x" + j + "=" + namber + '</br>');
-                }
-                document.writeln('</br>');
-            }
-        </script> -->
-
+    <!-- // <script> -->
+    <!-- //         for(var i = 1; i<10; i++)
+    //         {
+    //             for(var j = 1; j<10; j++)
+    //             {
+    //                 var namber = i * j;
+    //                 document.writeln(i + "x" + j + "=" + namber + '</br>');
+    //             }
+    //             document.writeln('</br>');
+    //         }
+    //  </script> -->
 
     <!-- <pre>
         <script>
@@ -71,7 +72,7 @@
         </script>
     </pre> -->
 
-        <!-- <script>
+    <!-- <script>
             var run = true;
             var count = 0;
 
@@ -154,6 +155,5 @@
 
         </script>
     </pre> -->
-  
-</body>
+  </body>
 </html>
