@@ -11,9 +11,9 @@
     </style>
   </head>
   <body>
-    <div id="result"></div>
+    <!-- <div id="result"></div>
     <button id="show">顯示結果</button>
-    
+
     <script>
     document.getElementById("show").onclick = doCalculate;
 
@@ -28,19 +28,20 @@
 
         document.getElementById("result").appendChild(s); //appendChild 是指加入一個屬性在 HTML 裡面
       }
-    </script>
+    </script> -->
 
-    <!-- 九九乘法表 :
+    九九乘法表 :
     <div id="result"></div>
 
         <script>
+
         for(var i = 2; i<10; i++)
         {
             for(var j = 1; j<10; j++)
             {
-                var result = i * j;
+                var namber = i * j;
                 var div = document.createElement("div");
-                div.innerHTML("<em>" + i + "</em> x <em>" + j + " </em> = <em>" + result + "/em");
+                div.innerHTML = ("<em>" + i + "</em> x <em>" + j + " </em> = <em>" + namber + "</em>");
                 document.getElementById("result").appendChild(div);
             }
         }
